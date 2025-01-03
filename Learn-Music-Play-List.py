@@ -67,18 +67,6 @@ async def shazam_it(music_file):
 # In[ ]:
 
 
-def add_it_to_db_old(db_name, a_song, an_artist):
-    info_dict ={}
-    info_dict["song"] = a_song
-    info_dict["artist"] = an_artist
-    json_info = json.dumps(info_dict)
-    with open(db_name, 'a') as db_file:
-        json.dump(json_info, db_file, indent=3) 
-
-
-# In[ ]:
-
-
 def add_it_to_db(db_name, a_song):
     with open(db_name, 'a') as db_file:
         json.dump(a_song, db_file, default=song_to_dict)
@@ -112,63 +100,9 @@ async def start_spy():
 
 # In[ ]:
 
+if __name__ == "__main__":
+    await start_spy()
 
-file_for_buffer = r".\buffer.acc"
-file_for_mp3 = r".\mp3_file.mp3"
-#cnv_audio(file_for_buffer, file_for_mp3)
-print(file_for_buffer, file_for_mp3)
-
-
-# In[ ]:
-
-
-await start_spy()
-
-
-# In[ ]:
-
-
-SUPPORTED_FFMPEG_FORMATS
-
-
-# In[ ]:
-
-
-shazam_chars = shazam_it(r".\buffer.mp3")
-
-
-# In[ ]:
-
-
-shazam_chars =  await shazam_it(r".\buffer.mp3")
-
-
-# In[ ]:
-
-
-print(shazam_chars)
-
-
-# In[ ]:
-
-
-print(len(shazam_chars["matches"]))
-
-
-# In[ ]:
-
-
-loop.run_until_complete(shazam_it)
-
-
-# In[ ]:
-
-
-import sys
-print(sys.version)
-
-
-# In[ ]:
 
 
 
