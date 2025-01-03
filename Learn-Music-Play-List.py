@@ -101,7 +101,7 @@ async def start_spy():
 # In[ ]:
 
 if __name__ == "__main__":
-    await start_spy()
+    asyncio.run(start_spy())
 
 
 
