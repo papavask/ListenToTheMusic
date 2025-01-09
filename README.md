@@ -12,3 +12,7 @@ Microsoft Edge:
     Select "Copy Value"
     7 Paste (CtrlV) this value into for example VLC Media Player
     Voila!
+
+    Find on line radio stations
+https://streamurl.link/
+http://nossl.fmstream.org
