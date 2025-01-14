@@ -1,7 +1,5 @@
 import streamlit as st
 import pandas as pd
-from app.core.utilities import dropdown_menus
-from core.excel import run_excel
 
 # Configure the main page
 st.set_page_config(
