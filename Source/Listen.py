@@ -22,7 +22,7 @@ file_path = "./Source/RadioList.csv"
 
 data = pd.read_csv(file_path, sep=",")
 
-station_list = list(data)
+station_list = list(data["Station"])
 
     # Select company
 selected_station = st.sidebar.selectbox(
