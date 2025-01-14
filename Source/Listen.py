@@ -31,7 +31,7 @@ selected_station = dropdown_menus(
 )
 
 if st.button("Listen Music"):
-  continue
+  pass
 
 # insert image
 st.image("assets/picture.jpg")
