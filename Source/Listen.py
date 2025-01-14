@@ -31,7 +31,11 @@ selected_station = st.sidebar.selectbox(
                    )
 
 if st.button("Listen Music"):
-  pass
+    Radio_url_df = data[data["Station"] == selected_station]
+    Radio_url_list = Radio_url_df.values.tolist()
+    Radio_url = Radio_url_list[0][2]
+    write(Radio_url)
+    pass
 
 # insert image
 #st.image("assets/picture.jpg")
