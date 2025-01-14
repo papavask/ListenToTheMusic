@@ -24,11 +24,13 @@ file_path = "./Source/RadioList.csv"
 
 data = pd.read_csv(file_path, sep=",")
 
-selected_station = dropdown_menus(
-    station_label="Select Station",
-    company_options=data["station"].unique(),
-    default_company="---",
-)
+station_list = list(data)
+
+    # Select company
+    selected_company = st.sidebar.selectbox(
+        "Select a station from the list",
+        station_list
+    )
 
 if st.button("Listen Music"):
   pass
