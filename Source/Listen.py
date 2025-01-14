@@ -27,10 +27,10 @@ data = pd.read_csv(file_path, sep=",")
 station_list = list(data)
 
     # Select company
-    selected_company = st.sidebar.selectbox(
-        "Select a station from the list",
-        station_list
-    )
+selected_station = st.sidebar.selectbox(
+                   "Select a station from the list",
+                   station_list
+                   )
 
 if st.button("Listen Music"):
   pass
