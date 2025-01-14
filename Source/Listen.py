@@ -15,7 +15,7 @@ subheader = st.subheader("Have Fun with music\nInstructions:")
 
 # Set text
 st.write(
-    "Welcome to the On-Lne Radio portal! Use the dropdown menus below to select a station, and then click the button to start listening."
+    "Welcome to the On-Lne Radio portal!\nUse the dropdown menus below to select a station,\nand then click the button to start listening."
 )
 
 file_path = "./Source/RadioList.csv"
