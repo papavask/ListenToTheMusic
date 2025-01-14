@@ -34,4 +34,4 @@ if st.button("Listen Music"):
   pass
 
 # insert image
-st.image("assets/picture.jpg")
+#st.image("assets/picture.jpg")
