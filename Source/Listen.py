@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import vlc
 
 # Configure the main page
 st.set_page_config(
@@ -34,8 +35,16 @@ if st.button("Listen Music"):
     Radio_url_df = data[data["Station"] == selected_station]
     Radio_url_list = Radio_url_df.values.tolist()
     Radio_url = Radio_url_list[0][2]
+    instance = vlc.Instance('--intf dummy')
+    player = instance.media_list_player_new()
+    media = instance.media_list_new(Radio_url)
+    player.set_media_list(media)
+    player.start()
     st.write(Radio_url)
     pass
+
+if st.button("Stop listening"):
+    player.stop()
 
 # insert image
 #st.image("assets/picture.jpg")
