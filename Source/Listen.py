@@ -37,9 +37,10 @@ if st.button("Listen Music"):
     Radio_url = Radio_url_list[0][2]
     #st.write(selected_station +"\n\n")
     #st.write(type(Radio_url))
-    Radio_url = "http://radiostreaming.ert.gr/ert-trito"
-    st.audio(Radio_url, format="audio/mp3")
-    pass
+    #Radio_url = "http://radiostreaming.ert.gr/ert-trito"
+    Sradio_url = ' '.join(Radio_url)
+    st.audio(Sradio_url, format="audio/mp3")
+    
 
 if st.button("Stop listening"):
     player.stop()
