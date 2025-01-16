@@ -38,13 +38,14 @@ if st.button("Listen Music"):
     #st.write(selected_station +"\n\n")
     #st.write(type(Radio_url))
     #Radio_url = "http://radiostreaming.ert.gr/ert-trito"
-    Sradio_url = ' '.join([str(s) for s in Radio_url])
+    #Sradio_url = ' '.join([str(s) for s in Radio_url])
+    Sradio_url = str(Sradio_url)
     #Sradio_url = "https://az10.yesstreaming.net/radio/8060/radio.mp3"
     Sradio_url = Sradio_url.replace(" ", "")
     st.write(type(Sradio_url))
     st.write(Sradio_url)
     
-    st.audio(str(Sradio_url), format="audio/mp3")
+    st.audio(Sradio_url, format="audio/mp3")
     
 
 # insert image
