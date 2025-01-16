@@ -38,6 +38,7 @@ if st.button("Listen Music"):
     Sradio_url = str(Radio_url)
     Sradio_url = Sradio_url.replace(" ", "")
     Sradio_url = Sradio_url[1:-1]
+    Sradio_url = data[data["Station"] == selected_station].values.tolist()[0][2][2:-1]
 
     
     st.audio(Sradio_url, format="audio/mp3", autoplay=True)
