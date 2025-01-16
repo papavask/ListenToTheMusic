@@ -42,7 +42,7 @@ if st.button("Listen Music"):
     Sradio_url = str(Radio_url)
     Sradio_url1 = "https://az10.yesstreaming.net/radio/8060/radio.mp3"
     Sradio_url = Sradio_url.replace(" ", "")
-    Sradio_url = Sradio_url[1:]
+    Sradio_url = Sradio_url[1:-1]
     #st.write(type(Sradio_url))
     st.write(Sradio_url)
     st.write(len(Sradio_url), len(Sradio_url1))
