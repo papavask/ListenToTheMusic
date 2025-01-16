@@ -44,7 +44,7 @@ if st.button("Listen Music"):
     st.write(type(Sradio_url))
     st.write(Sradio_url)
     
-    st.audio(Sradio_url, format="audio/mp3")
+    st.audio(str(Sradio_url), format="audio/mp3")
     
 
 # insert image
