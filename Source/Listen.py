@@ -35,8 +35,7 @@ if st.button("Listen Music"):
     Radio_url_df = data[data["Station"] == selected_station]
     Radio_url_list = Radio_url_df.values.tolist()
     Radio_url = Radio_url_list[0][2]
-    st.audio(Radio_url, autoplay=True)
-    st.write(Radio_url)
+    st.write(selected_station +"\n\n", Radio_url)
     pass
 
 if st.button("Stop listening"):
