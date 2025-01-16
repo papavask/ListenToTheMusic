@@ -34,9 +34,9 @@ selected_station = st.sidebar.selectbox(
 if st.button("Listen Music"):
     Radio_url_df = data[data["Station"] == selected_station]
     Radio_url_list = Radio_url_df.values.tolist()
-    Radio_url = Radio_url_list[0][2]
+    Radio_url = str(Radio_url_list[0][2])
     #st.write(selected_station +"\n\n")
-    #st.write(Radio_url)
+    st.write(type(Radio_url))
     st.audio(Radio_url, format="audio/mp3")
     pass
 
