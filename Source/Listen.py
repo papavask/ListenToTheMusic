@@ -35,19 +35,10 @@ if st.button("Listen Music"):
     Radio_url_df = data[data["Station"] == selected_station]
     Radio_url_list = Radio_url_df.values.tolist()
     Radio_url = Radio_url_list[0][2]
-    #st.write(selected_station +"\n\n")
-    #st.write(type(Radio_url))
-    #Radio_url = "http://radiostreaming.ert.gr/ert-trito"
-    #Sradio_url = ' '.join([str(s) for s in Radio_url])
     Sradio_url = str(Radio_url)
-    Sradio_url1 = "https://az10.yesstreaming.net/radio/8060/radio.mp3"
-    Sradio_url = Sradio_url.replace(" ", "")
+    #Sradio_url = Sradio_url.replace(" ", "")
     Sradio_url = Sradio_url[1:-1]
-    #st.write(type(Sradio_url))
-    st.write(Sradio_url)
-    st.write(len(Sradio_url), len(Sradio_url1))
-    if Sradio_url == Sradio_url1:
-        st.write('!!!!!!!!!')
+
     
     st.audio(Sradio_url, format="audio/mp3", autoplay=True)
     
