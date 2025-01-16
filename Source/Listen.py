@@ -45,8 +45,6 @@ if st.button("Listen Music"):
     #st.write(type(Sradio_url))
     st.write(Sradio_url)
     st.write(len(Sradio_url), len(Sradio_url1))
-    for ii in range(len(Sradio_url)):
-        print(ord(Sradio_url[ii:ii]))
     if Sradio_url == Sradio_url1:
         st.write('!!!!!!!!!')
     
