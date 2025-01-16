@@ -45,7 +45,7 @@ if st.button("Listen Music"):
     st.write(type(Sradio_url))
     st.write(Sradio_url)
     
-    st.audio(Sradio_url, format="audio/mp3")
+    st.audio("https://az10.yesstreaming.net/radio/8060/radio.mp3", format="audio/mp3", autoplay=True)
     
 
 # insert image
