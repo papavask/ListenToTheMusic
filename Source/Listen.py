@@ -39,7 +39,8 @@ if st.button("Listen Music"):
     #st.write(type(Radio_url))
     #Radio_url = "http://radiostreaming.ert.gr/ert-trito"
     Sradio_url = ' '.join([str(s) for s in Radio_url])
-    Sradio_url = Sradio_url.strip()
+    #Sradio_url = 'h t t p s : / / a z 1 0 . y e s s t r e a m i n g . n e t / r a d i o / 8 0 6 0 / r a d i o . m p 3
+    Sradio_url = Sradio_url.replace(" ", "")
     st.write(Sradio_url)
     
     st.audio(Sradio_url, format="audio/mp3")
