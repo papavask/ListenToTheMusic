@@ -36,7 +36,7 @@ if st.button("Listen Music"):
     Radio_url_list = Radio_url_df.values.tolist()
     Radio_url = Radio_url_list[0][2]
     Sradio_url = str(Radio_url)
-    #Sradio_url = Sradio_url.replace(" ", "")
+    Sradio_url = Sradio_url.replace(" ", "")
     Sradio_url = Sradio_url[1:-1]
 
     
