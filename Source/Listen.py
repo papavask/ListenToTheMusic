@@ -40,10 +40,12 @@ if st.button("Listen Music"):
     #Radio_url = "http://radiostreaming.ert.gr/ert-trito"
     #Sradio_url = ' '.join([str(s) for s in Radio_url])
     Sradio_url = str(Radio_url)
-    #Sradio_url = "https://az10.yesstreaming.net/radio/8060/radio.mp3"
+    Sradio_url1 = "https://az10.yesstreaming.net/radio/8060/radio.mp3"
     Sradio_url = Sradio_url.replace(" ", "")
     st.write(type(Sradio_url))
     st.write(Sradio_url)
+    if Sradio_url == Sradio_url1:
+        st.write('!!!!!!!!!')
     
     st.audio("https://az10.yesstreaming.net/radio/8060/radio.mp3", format="audio/mp3", autoplay=True)
     
