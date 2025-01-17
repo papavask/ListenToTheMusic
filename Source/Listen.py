@@ -3,11 +3,11 @@ import pandas as pd
 from PIL import Image
 
 
-im = Image.open("../Source/favicon.ico")
+#im = Image.open("../Source/favicon.ico")
 # Configure the main page
 st.set_page_config(
     page_title="Listen On-Line Radio Stations",
-    page_icon=im,
+    #page_icon=im,
     #page_icon="📊",
     layout="wide",
 )
