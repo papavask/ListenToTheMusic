@@ -10,6 +10,11 @@ st.set_page_config(
     page_icon=im,
     #page_icon="📊",
     layout="wide",
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Report a bug': "mailto:john@example.com",
+        'About': "# This is a header. This is an *extremely* cool app!"
+    }
 )
 
 # Set title
