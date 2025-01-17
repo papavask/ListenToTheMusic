@@ -12,7 +12,7 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
     menu_items={
-        'Report a bug': mailto:papavask@yahoo.com,
+        'Report a bug': 'mailto:papavask@yahoo.com',
         'About': "# Listen music for entertainment* On line radio statios"
     }
 )
