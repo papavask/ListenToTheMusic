@@ -3,7 +3,7 @@ import pandas as pd
 from PIL import Image
 
 
-im = Image.open("https://raw.githubusercontent.com/papavask/ListenToTheMusic/refs/heads/main/Source/favicon.ico")
+im = Image.open("../Source/favicon.ico")
 # Configure the main page
 st.set_page_config(
     page_title="Listen On-Line Radio Stations",
@@ -22,7 +22,7 @@ st.write(
     "Welcome to the On-Lne Radio portal!\nUse the dropdown menus below to select a station,\n\nand then click the button to start listening."
 )
 
-file_path = "https://raw.githubusercontent.com/papavask/ListenToTheMusic/refs/heads/main/Source/RadioList.csv"
+file_path = "../Source/RadioList.csv"
 
 data = pd.read_csv(file_path, sep=",")
 
