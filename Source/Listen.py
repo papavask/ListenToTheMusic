@@ -16,6 +16,17 @@ st.set_page_config(
     }
 )
 
+
+        
+# Set title
+st.title("On-Line Radio Stations")
+
+subheader = st.subheader("Have Fun with music\nInstructions:")
+
+# Set text
+st.write("Welcome to the On-Lne Radio portal!")
+st.write("Use the dropdown menus to select a station,\n\nand then click the button to start listening.")
+
 st.markdown(
     """
     <style>
@@ -29,15 +40,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-        
-# Set title
-st.title("On-Line Radio Stations")
-
-subheader = st.subheader("Have Fun with music\nInstructions:")
-
-# Set text
-st.write("Welcome to the On-Lne Radio portal!")
-st.write("Use the dropdown menus to select a station,\n\nand then click the button to start listening.")
 
 # insert image
 #st.image("assets/picture.jpg")
