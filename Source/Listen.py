@@ -17,7 +17,7 @@ st.set_page_config(
 )
 
 st.markdown(
-    f"""
+    """
     <style>
     .reportview-container {
         background-image: url("bg-img.jpj")
