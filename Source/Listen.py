@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 from PIL import Image
+import base64
 
 
 im = Image.open("./Source/favicon.ico")
