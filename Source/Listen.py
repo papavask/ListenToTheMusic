@@ -15,8 +15,21 @@ st.set_page_config(
         'About': "# Listen music for entertainment* On line radio statios"
     }
 )
-
-
+bg_url = "./Source/bg-imp.jpg"
+st.markdown(
+    f"""
+    <style>
+        .stApp {{
+            background-image: url("{image_url}");
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
         
 # Set title
 st.title("On-Line Radio Stations")
@@ -27,19 +40,6 @@ subheader = st.subheader("Have Fun with music\nInstructions:")
 st.write("Welcome to the On-Lne Radio portal!")
 st.write("Use the dropdown menus to select a station,\n\nand then click the button to start listening.")
 
-st.markdown(
-    """
-    <style>
-    .reportview-container {
-        background-image: url("bg-img.png")
-    }
-    .sidebar .sidebar-content {
-        background-image: url("sb-img.png")
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
 
 # insert image
 #st.image("assets/picture.jpg")
