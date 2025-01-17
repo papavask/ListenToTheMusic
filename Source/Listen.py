@@ -30,7 +30,7 @@ st.markdown(
     <style>
         .stApp {{
             background-image: url("{bg_url}");
-            background-size: auto;
+            background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
             background-color: #61dafb; /* Dark background */
