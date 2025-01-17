@@ -22,7 +22,7 @@ st.write(
     "Welcome to the On-Lne Radio portal!\nUse the dropdown menus below to select a station,\n\nand then click the button to start listening."
 )
 
-file_path = "https://github.com/papavask/ListenToTheMusic/blob/main/Source/RadioList.csv"
+file_path = "https://raw.githubusercontent.com/papavask/ListenToTheMusic/refs/heads/main/Source/RadioList.csv"
 
 data = pd.read_csv(file_path, sep=",")
 
