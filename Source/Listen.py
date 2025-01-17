@@ -15,7 +15,7 @@ st.set_page_config(
         'About': "# Listen music for entertainment* On line radio statios"
     }
 )
-bg_url = "./Source/bg-imp.jpg"
+bg_url = "./Source/bg-imp.png"
 st.markdown(
     f"""
     <style>
