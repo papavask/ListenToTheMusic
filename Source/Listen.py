@@ -31,10 +31,10 @@ st.markdown(
     """
     <style>
     .reportview-container {
-        background-image: url("bg-img.jpj")
+        background-image: url("bg-img.jpg")
     }
     .sidebar .sidebar-content {
-        background-image: url("sb-img.jpj")
+        background-image: url("sb-img.jpg")
     }
     </style>
     """,
