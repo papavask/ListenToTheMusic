@@ -3,7 +3,7 @@ import pandas as pd
 from PIL import Image
 
 
-im = Image.open("https://github.com/papavask/ListenToTheMusic/blob/main/Source/favicon.ico")
+im = Image.open("https://raw.githubusercontent.com/papavask/ListenToTheMusic/refs/heads/main/Source/favicon.ico")
 # Configure the main page
 st.set_page_config(
     page_title="Listen On-Line Radio Stations",
