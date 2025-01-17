@@ -33,6 +33,8 @@ st.markdown(
             background-size: contain;
             background-position: center center;
             background-repeat: no-repeat;
+            background-color: #61dafb; /* Dark background */
+            color: #282c34;            /* Light blue text */
             height: 100vh;
         }}
     </style>
