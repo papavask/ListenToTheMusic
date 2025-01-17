@@ -1,11 +1,14 @@
 import streamlit as st
 import pandas as pd
+from PIL import Image
 
 
+im = Image.open("https://github.com/papavask/ListenToTheMusic/blob/main/Source/favicon.ico")
 # Configure the main page
 st.set_page_config(
     page_title="Listen On-Line Radio Stations",
-    page_icon="📊",
+    page_icon=im,
+    #page_icon="📊",
     layout="wide",
 )
 
