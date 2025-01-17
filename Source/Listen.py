@@ -16,7 +16,7 @@ st.set_page_config(
     }
 )
 
-image_url = "./bg-img.jpg"  # Or use a local path like "assets/background.jpg"
+image_url = "./Source/bg-img.jpg"  # Or use a local path like "assets/background.jpg"
 mime_type = image_url.split('.')[-1:][0].lower()
 with open(image_url, "rb") as f:
    content_bytes = f.read()
