@@ -15,7 +15,15 @@ st.set_page_config(
         'About': "# Listen music for entertainment* On line radio statios"
     }
 )
-bg_url = "./Source/bg-imp.png"
+
+image_url = "bg-img.jpg"  # Or use a local path like "assets/background.jpg"
+mime_type = image_url.split('.')[-1:][0].lower()
+with open(image_url, "rb") as f:
+   content_bytes = f.read()
+content_b64encoded = base64.b64encode(content_bytes).decode()
+bg_url = f'data:image/{mime_type};base64,{content_b64encoded}'
+
+
 st.markdown(
     f"""
     <style>
