@@ -65,7 +65,7 @@ file_path = "./Source/RadioList.csv"
 data = pd.read_csv(file_path, sep=",")
 
 station_list = list(data["Station"])
-
+st.session_state['listen_clicked'] = False
 # Select station
 selected_station = st.sidebar.selectbox(
                    "Select a station from the list",
