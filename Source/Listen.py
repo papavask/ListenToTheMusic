@@ -66,9 +66,18 @@ selected_station = st.sidebar.selectbox(
                    "Select a station from the list",
                    station_list
                    )
+st.button("Listen Music", key="listen")
+st.button("Find Title", key="title", disabled=True)
 
-if st.button("Listen Music"):
+if st.button("listen"):
+    st.session_state['listen_clicked'] = True
     Radio_url = data[data["Station"] == selected_station].values.tolist()[0][2][2:-1]
     st.audio(Radio_url, format="audio/mp3", autoplay=True)
+
+if st.session_state['listen_clicked']:
+    if st.button('title'):
+        st.write("butt02 was clicked!")
+else:
+    st.button('title', disabled=True)
     
 
