@@ -73,11 +73,11 @@ selected_station = st.sidebar.selectbox(
                    )
 st.button("Listen Music", key="listen", on_click=click_listen)
 st.button("Find Title", key="title")
-
+st.write("Hi")
 
 if st.session_state['listen_clicked']:
     if st.button("Find Title"):
-        st.write("butt02 was clicked!")
+        st.write("************************************butt02 was clicked!")
 else:
     st.button("Find Title", disabled=True)
     
