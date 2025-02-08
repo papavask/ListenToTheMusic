@@ -3,7 +3,7 @@ import pandas as pd
 from PIL import Image
 import base64
 
-def click_listen():
+def click_listen(data):
     st.session_state['listen_clicked'] = True
     Radio_url = data[data["Station"] == selected_station].values.tolist()[0][2][2:-1]
     st.audio(Radio_url, format="audio/mp3", autoplay=True)
@@ -71,7 +71,7 @@ def start_main():
                        "Select a station from the list",
                        station_list
                        )
-    st.button("Listen Music", key="listen", on_click=click_listen)
+    st.button("Listen Music", key="listen", on_click=click_listen(data))
     st.button("Find Title", key="title")
     st.write("Hi")
 
