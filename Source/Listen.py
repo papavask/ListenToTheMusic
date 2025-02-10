@@ -40,7 +40,7 @@ def start_main():
                 background-repeat: no-repeat;
                 background-color: #61dafb; /* Dark background */
                 color: #282c34;            /* Light blue text */
-            h    eight: 100vh;
+                height: 100vh;
             }}
         </style>
         """,
