@@ -23,6 +23,13 @@ def get_remote_ip() -> str:
         return None
     return session_info.request.remote_ip
 
+def click_find:
+    #text = st.sidebar.text_input("Text:")
+    #logger.info(f"This is the text: {text}")
+    st.write("************************************butt02 was clicked!")
+    logger.info("This is a logging test")
+    logger.info(f"st.session_state.listen_clicked is {st.session_state.listen_clicked}!!!")
+
 
 def click_listen(Radio_url):
     # st.session_state.listen_clicked = True
@@ -106,12 +113,7 @@ def start_main():
     st.write(st.session_state.listen_clicked)
 
     if st.session_state.listen_clicked:
-        if st.button("Find Title"):
-           text = st.sidebar.text_input("Text:")
-           logger.info(f"This is the text: {text}")
-           st.write("************************************butt02 was clicked!")
-           logger.info("This is a logging test")
-           logger.info(f"st.session_state.listen_clicked is {st.session_state.listen_clicked}!!!")
+        if st.button("Find Title", on_click=click_find):
     else:
         st.button("Find Title", disabled=True)
 
