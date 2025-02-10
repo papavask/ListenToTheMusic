@@ -4,6 +4,12 @@ from PIL import Image
 import base64
 import logging
 
+
+class ContextFilter(logging.Filter):
+    def filter(self, record):
+        record.user_ip = get_remote_ip()
+        return super().filter(record)
+
 def click_listen(data, selected_station):
     # st.session_state.listen_clicked = True
     Radio_url = data[data["Station"] == selected_station].values.tolist()[0][2][2:-1]
@@ -87,10 +93,32 @@ def start_main():
     if st.session_state.listen_clicked:
         if st.button("Find Title"):
             st.write("************************************butt02 was clicked!")
-            logging.warning("This is a logging test")
+            logging.info("This is a logging test")
     else:
         st.button("Find Title", disabled=True)
 
+def init_logging():
+    # Make sure to instanciate the logger only once
+    # otherwise, it will create a StreamHandler at every run
+    # and duplicate the messages
+
+    # create a custom logger
+    logger = logging.getLogger("foobar")
+    if logger.handlers:  # logger is already setup, don't setup again
+        return
+    logger.propagate = False
+    logger.setLevel(logging.INFO)
+    # in the formatter, use the variable "user_ip"
+    formatter = logging.Formatter("%(name)s %(asctime)s %(levelname)s [user_ip=%(user_ip)s] - %(message)s")
+    handler = logging.StreamHandler()
+    handler.setLevel(logging.INFO)
+    handler.addFilter(ContextFilter())
+    handler.setFormatter(formatter)
+    logger.addHandler(handler)
+
+
 if __name__ == "__main__":
+    init_logging()
+    logger = logging.getLogger("foobar")
     start_main()
 
