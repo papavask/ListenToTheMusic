@@ -99,6 +99,7 @@ def start_main():
 
     try:
        st.write(f"station={selected_station}")
+       logger.info(f"station={selected_station}")
     except Exception:
        selected_station = ""
 
