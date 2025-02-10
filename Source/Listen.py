@@ -113,7 +113,7 @@ def start_main():
     st.write(st.session_state.listen_clicked)
 
     if st.session_state.listen_clicked:
-        if st.button("Find Title", on_click=click_find):
+        st.button("Find Title", on_click=click_find)
     else:
         st.button("Find Title", disabled=True)
 
