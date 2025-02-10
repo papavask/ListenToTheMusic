@@ -23,7 +23,7 @@ def get_remote_ip() -> str:
         return None
     return session_info.request.remote_ip
 
-def click_find:
+def click_find():
     #text = st.sidebar.text_input("Text:")
     #logger.info(f"This is the text: {text}")
     st.write("************************************butt02 was clicked!")
