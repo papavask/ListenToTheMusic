@@ -7,6 +7,7 @@ def click_listen(data, selected_station):
     st.session_state.listen_clicked = True
     Radio_url = data[data["Station"] == selected_station].values.tolist()[0][2][2:-1]
     st.audio(Radio_url, format="audio/mp3", autoplay=True)
+    st.write(st.session_state.listen_clicked)
     
 def start_main():
     im = Image.open("./Source/favicon.ico")
@@ -76,8 +77,7 @@ def start_main():
                        "Select a station from the list",
                        station_list
                        )
-    if st.button("Listen Music", key="listen", on_click=click_listen, args=[data, selected_station]):
-      pass
+    st.button("Listen Music", key="listen", on_click=click_listen, args=[data, selected_station])
     # st.button("Find Title", key="title")
     st.write("Hi")
     st.write(st.session_state.listen_clicked)
