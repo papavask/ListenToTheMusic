@@ -4,7 +4,7 @@ from PIL import Image
 import base64
 
 def click_listen(data, selected_station):
-    st.session_state['listen_clicked'] = True
+    st.session_state.listen_clicked = True
     Radio_url = data[data["Station"] == selected_station].values.tolist()[0][2][2:-1]
     st.audio(Radio_url, format="audio/mp3", autoplay=True)
     
@@ -65,18 +65,19 @@ def start_main():
     data = pd.read_csv(file_path, sep=",")
 
     station_list = list(data["Station"])
-    st.session_state['listen_clicked'] = False
+    if 'listen_clicked' not in st.session_state:
+       st.session_state.listen_clicked = False
 # Select station
     selected_station = st.sidebar.selectbox(
                        "Select a station from the list",
                        station_list
                        )
-    if st.button("Listen Music", key="listen", on_click=click_listen(data, selected_station)):
+    if st.button("Listen Music", key="listen", on_click=click_listen, args=[data, selected_station]):
       pass
     # st.button("Find Title", key="title")
     st.write("Hi")
 
-    if st.session_state['listen_clicked']:
+    if st.session_state.listen_clicked:
         if st.button("Find Title"):
             st.write("************************************butt02 was clicked!")
     else:
