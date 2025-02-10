@@ -106,9 +106,11 @@ def start_main():
 
     if st.session_state.listen_clicked:
         if st.button("Find Title"):
-            st.write("************************************butt02 was clicked!")
-            logger.info("This is a logging test")
-            logger.info(f"st.session_state.listen_clicked is {st.session_state.listen_clicked}!!!")
+           text = st.sidebar.text_input("Text:")
+           logger.info(f"This is the text: {text}")
+           st.write("************************************butt02 was clicked!")
+           logger.info("This is a logging test")
+           logger.info(f"st.session_state.listen_clicked is {st.session_state.listen_clicked}!!!")
     else:
         st.button("Find Title", disabled=True)
 
