@@ -33,7 +33,6 @@ def click_find():
 
 def click_listen(Radio_url):
     # st.session_state.listen_clicked = True
-    
     st.audio(Radio_url, format="audio/mp3", autoplay=True)
     st.write(st.session_state.listen_clicked)
     
@@ -114,6 +113,7 @@ def start_main():
 
     if st.session_state.listen_clicked:
         st.button("Find Title", on_click=click_find)
+        st.session_state.listen_clicked = True
     else:
         st.button("Find Title", disabled=True)
 
