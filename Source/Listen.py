@@ -76,6 +76,7 @@ def start_main():
       pass
     # st.button("Find Title", key="title")
     st.write("Hi")
+    st.write(st.session_state.listen_clicked)
 
     if st.session_state.listen_clicked:
         if st.button("Find Title"):
