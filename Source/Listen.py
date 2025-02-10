@@ -97,6 +97,8 @@ def start_main():
        st.session_state.listen_clicked = False
        logger.info("bp001")
 
+    st.write(f"station={selected_station}")
+
     if 'selected_station' not in vars():
        st.session_state.listen_clicked = False
        logger.info("bp002")
