@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 from PIL import Image
 import base64
+import logging
 
 def click_listen(data, selected_station):
     # st.session_state.listen_clicked = True
@@ -86,6 +87,7 @@ def start_main():
     if st.session_state.listen_clicked:
         if st.button("Find Title"):
             st.write("************************************butt02 was clicked!")
+            logging.info("This is a logging test")
     else:
         st.button("Find Title", disabled=True)
 
