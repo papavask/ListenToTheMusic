@@ -120,5 +120,6 @@ def init_logging():
 if __name__ == "__main__":
     init_logging()
     logger = logging.getLogger("foobar")
+    logger.info("Inside main")
     start_main()
 
