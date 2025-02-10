@@ -72,7 +72,7 @@ def start_main():
                        station_list
                        )
     st.button("Listen Music", key="listen", on_click=click_listen(data, selected_station))
-    st.button("Find Title", key="title")
+    # st.button("Find Title", key="title")
     st.write("Hi")
 
     if st.session_state['listen_clicked']:
