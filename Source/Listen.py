@@ -71,7 +71,8 @@ def start_main():
                        "Select a station from the list",
                        station_list
                        )
-    st.button("Listen Music", key="listen", on_click=click_listen(data, selected_station))
+    if st.button("Listen Music", key="listen", on_click=click_listen(data, selected_station)):
+      pass
     # st.button("Find Title", key="title")
     st.write("Hi")
 
