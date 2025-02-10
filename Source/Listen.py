@@ -95,9 +95,11 @@ def start_main():
     station_list = list(data["Station"])
     if 'listen_clicked' not in st.session_state:
        st.session_state.listen_clicked = False
+       logger.info("bp001")
 
     if 'selected_station' not in vars():
        st.session_state.listen_clicked = False
+       logger.info("bp002")
 
 # Select station
     selected_station = st.sidebar.selectbox(
