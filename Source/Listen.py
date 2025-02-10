@@ -99,7 +99,7 @@ def start_main():
 
     try:
        st.write(f"station={selected_station}")
-    except Exception
+    except Exception:
        selected_station = ""
 
     if 'selected_station' not in vars():
